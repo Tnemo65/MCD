@@ -198,7 +198,7 @@
 
         <p class="carousel-hints">💡 Click vào ảnh hoặc dùng phím ← → để xem</p>
 
-        <button class="btn-primary" id="btn-to-couple">
+        <button type="button" class="btn-primary" id="btn-to-couple">
           <span>Xem khoảnh khắc đôi của chúng ta →</span>
         </button>
       </div>
@@ -214,7 +214,7 @@
           <!-- Couple pairs will be dynamically generated here -->
         </div>
 
-        <button class="btn-primary" id="btn-to-confession">
+        <button type="button" class="btn-primary" id="btn-to-confession">
           <span>Anh có điều muốn nói...</span>
         </button>
       </div>
@@ -232,8 +232,8 @@
             <strong>Em có muốn làm người yêu của anh không?</strong>
           </p>
           <div class="confession-buttons">
-            <button class="btn-yes" id="btn-yes">Có! Em đồng ý 💕</button>
-            <button class="btn-no" id="btn-no">Để em suy nghĩ... 🤔</button>
+            <button type="button" class="btn-yes" id="btn-yes">Có! Em đồng ý 💕</button>
+            <button type="button" class="btn-no" id="btn-no">Để em suy nghĩ... 🤔</button>
           </div>
         </div>
       </div>
@@ -261,19 +261,11 @@
           </div>
         </div>
 
-        <!-- Love Letter (hidden initially) -->
-        <div class="love-letter" id="love-letter" style="display: none;">
-          <div class="letter-envelope">
-            <div class="letter-paper">
-              <h2 class="letter-title">💝 Thư Tình Gửi Em 💝</h2>
-              <div class="letter-content" id="letter-content">
-                <!-- Letter content composed from chat messages -->
-              </div>
-              <div class="letter-signature">
-                <p>Mãi yêu em,</p>
-                <p class="signature-name">Anh của em 💕</p>
-              </div>
-            </div>
+        <!-- Love Letter (hidden initially) - Direct, no wrappers -->
+        <div class="letter-paper" id="love-letter" style="display: none;">
+          <h2 class="letter-title">💝 Thư Tình Gửi Em 💝</h2>
+          <div class="letter-content" id="letter-content">
+            <!-- Letter content will include signature from config -->
           </div>
         </div>
 

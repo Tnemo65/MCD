@@ -36,6 +36,11 @@
         min-width: auto;
     }
     
+    /* Button on couple page - add spacing */
+    #btn-to-confession {
+        margin-top: 2.5rem !important; /* Space below couple gallery */
+    }
+    
     /* ===== Page 2: Timeline ===== */
     #page-story {
         padding-top: var(--space-lg);
@@ -51,40 +56,82 @@
         max-width: 100%;
     }
     
+    .timeline-item {
+        margin-bottom: var(--space-xl);
+    }
+    
     .timeline-icon {
         width: 36px;
         height: 36px;
         left: -35px;
         font-size: 16px;
+        top: 10px;
     }
     
-    .timeline-content {
-        padding: var(--space-md);
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
+     .timeline-content {
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        grid-template-columns: none !important;
     }
     
+    /* Always show image first (top), then text (bottom) */
     .timeline-item:nth-child(odd) .timeline-content,
     .timeline-item:nth-child(even) .timeline-content {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
     }
     
     .timeline-item:nth-child(odd) .timeline-text,
     .timeline-item:nth-child(even) .timeline-text {
-        order: 1;
+        order: 2 !important;
+        padding: var(--space-lg) var(--space-md);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        width: 100% !important;
     }
     
+    /* Image section - prominent display */
     .timeline-item:nth-child(odd) .timeline-image,
     .timeline-item:nth-child(even) .timeline-image {
-        order: 2;
+        order: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important; /* Changed to square from 4:3 */
+        margin: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    .timeline-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        max-height: none !important;
+    }
+    
+    .timeline-date {
+        display: block;
+        margin-bottom: var(--space-sm);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
     
     .timeline-content h3 {
-        font-size: 1.25rem;
+        font-size: 1.35rem;
+        margin-bottom: var(--space-sm);
+        color: var(--text-primary);
     }
     
     .timeline-content p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: var(--text-secondary);
     }
     
     .btn-secondary {

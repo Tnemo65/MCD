@@ -21,22 +21,50 @@ Lạc vào tim anh lẻ loi
             icon: '💫',
             date: 'Ngày đầu tiên',
             title: 'Lần đầu gặp nhau',
-            image: 'img/z7358483214722_f55bfea9177477d54e92372273b24a1e.jpg',
+            image: 'img/z7358483231625_5a673dfbef2c2a02f3b37307052692c2.jpg',
             description: 'Khoảnh khắc mà trái tim anh bắt đầu rung động...'
         },
         {
             icon: '💬',
             date: 'Những ngày sau đó',
             title: 'Những cuộc trò chuyện',
-            image: 'img/z7358483219029_6179d585d4d50df1a84c4505aae5a36c.jpg',
+            image: 'img/z7358486977728_576d85cc9456463ad660f754267f5cdb.jpg',
             description: 'Mỗi tin nhắn, mỗi cuộc gọi đều làm anh thêm nhớ em...'
         },
         {
             icon: '☕',
             date: 'Kỷ niệm đẹp',
             title: 'Những lần hẹn hò',
-            image: 'img/z7358483223541_9207ef3cefcbd0dbe919f0cac437c51e.jpg',
+            image: 'img/z7358486973044_95059a4f53e73deddafa9174075c35b2.jpg',
             description: 'Bên em, thời gian như ngừng trôi...'
+        },
+        {
+            icon: '☕',
+            date: 'Kỷ niệm đẹp',
+            title: 'Những lần hẹn hò',
+            image: 'img/z7358483228862_625e3f3a461cf448bdf5ef5c7936d399.jpg',
+            description: 'Bên em, thời gian như ngừng trôi...'
+        },
+        {
+            icon: '💕',
+            date: 'Hôm nay',
+            title: 'Khoảnh khắc này',
+            image: 'img/z7362208920255_d65f98b073a94042a69380b8a17d077e.jpg',
+            description: 'Anh muốn nói với em điều quan trọng...'
+        },
+        {
+            icon: '💕',
+            date: 'Hôm nay',
+            title: 'Khoảnh khắc này',
+            image: 'img/z7362208918537_4f75cfc21fee05e3d5edaf540af86700.jpg',
+            description: 'Anh muốn nói với em điều quan trọng...'
+        },
+        {
+            icon: '💕',
+            date: 'Hôm nay',
+            title: 'Khoảnh khắc này',
+            image: 'img/z7358486974154_599a02f7be63a75c6fc9255544e8a829.jpg',
+            description: 'Anh muốn nói với em điều quan trọng...'
         },
         {
             icon: '💕',
@@ -71,10 +99,6 @@ Lạc vào tim anh lẻ loi
             caption: 'Khoảnh khắc ngọt ngào 💖'
         },
         {
-            src: 'img/z7358483228990_1df803015d80a1d452235be1e896048f.jpg',
-            caption: 'Yêu em nhiều lắm 💝'
-        },
-        {
             src: 'img/z7358483231625_5a673dfbef2c2a02f3b37307052692c2.jpg',
             caption: 'Những phút giây bên em 💞'
         },
@@ -91,6 +115,10 @@ Lạc vào tim anh lẻ loi
             caption: 'Yêu em từng ngày 💓'
         },
         {
+            src: 'img/z7362207921045_07ac01e7791c2c40bc124665e5234b4c.jpg',
+            caption: 'Yêu em nhiều lắm 💝'
+        },
+        {
             src: 'img/z7358486977728_576d85cc9456463ad660f754267f5cdb.jpg',
             caption: 'Những giấc mơ chung 🌙'
         },
@@ -99,7 +127,7 @@ Lạc vào tim anh lẻ loi
             caption: 'Mãi mãi bên em 💕'
         }
     ],
-
+    
     // ===== TRANG 4: CONFESSION =====
     title: 'Phải chăng em đã yêu ngay từ cái nhìn đầu tiên 😙',
     desc: 'Phải chăng em đã say ngay từ lúc thấy nụ cười ấy',
@@ -122,8 +150,8 @@ Lạc vào tim anh lẻ loi
     // 6 ảnh couple với hiệu ứng side-by-side
     coupleGallery: [
         {
-            left: 'img/couple/a.1.jpg',
-            right: 'img/couple/a.2.jpg',
+            left: 'img/couple/a.2.jpg',
+            right: 'img/couple/a.1.jpg',
             caption: 'Khoảnh khắc bên nhau 💕'
         },
         {
@@ -132,8 +160,8 @@ Lạc vào tim anh lẻ loi
             caption: 'Cùng nhau mỗi ngày 💗'
         },
         {
-            left: 'img/couple/c.1.jpg',
-            right: 'img/couple/c.2.jpg',
+            left: 'img/couple/c.2.jpg',
+            right: 'img/couple/c.1.jpg',
             caption: 'Hạnh phúc song hành 💞'
         }
     ],
@@ -160,27 +188,19 @@ Lạc vào tim anh lẻ loi
         
         // Nội dung thư tình (hiện sau khi chat xong)
         loveLetter: [
-            'Em yêu của anh,',
-            '',
-            'Có những điều anh muốn nói, nhưng lời nói thật khó diễn tả được hết tâm tư này...',
-            '',
+            'Em yêu của anh, Có những điều anh muốn nói, nhưng lời nói thật khó diễn tả được hết tâm tư này...',
             'Từ lần đầu gặp em, ánh mắt của em đã làm anh nhận ra rằng,',
             'Có một người đã khiến trái tim anh rung động theo một cách mà anh chưa từng biết.',
-            '',
             'Mỗi ngày trôi qua bên em, anh thấy mình may mắn biết bao.',
             'Em là ánh sáng trong những ngày tối, là niềm vui trong những khoảnh khắc buồn.',
             'Em là lý do khiến anh muốn trở thành phiên bản tốt hơn của chính mình.',
-            '',
             'Anh không giỏi lời văn hoa mỹ như những bài thơ,',
             'Nhưng anh muốn em biết rằng...',
-            '',
             'Trong trái tim anh, em là duy nhất.',
             'Em là người anh muốn chia sẻ mọi khoảnh khắc,',
             'Từ những điều nhỏ nhặt nhất đến những giấc mơ lớn lao nhất.',
-            '',
             'Anh hứa sẽ luôn ở bên em, yêu thương em, trân trọng em,',
             'Và mỗi ngày, anh sẽ cố gắng để em luôn cảm thấy hạnh phúc.',
-            '',
             'Em chính là câu trả lời mà anh đã tìm kiếm suốt bấy lâu nay.',
             '',
             'Mãi bên em,',

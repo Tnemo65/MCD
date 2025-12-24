@@ -2406,6 +2406,52 @@ button, .btn-primary, .btn-secondary {
         padding: 14px 28px;
         font-size: 1rem;
     }
+    
+    /* Love Scene - Fixed Letter on Mobile */
+    #page-love-scene {
+        overflow: hidden !important; /* No scroll on mobile */
+    }
+    
+    .love-scene-content {
+        overflow: hidden !important;
+    }
+    
+    .love-letter {
+        width: 90%; /* Container width on mobile */
+        padding: 0; /* No padding on mobile */
+    }
+    
+    .letter-paper {
+        box-sizing: border-box !important;
+        width: 88vw; /* Reduced for better fit on mobile */
+        max-width: 400px; /* Reduced from 420px */
+        height: 85vh; /* Increased from 78vh */
+        max-height: 720px; /* Increased from 640px */
+        padding: 30px 24px 35px 24px; /* Reduced padding */
+    }
+    
+    .letter-title {
+        font-size: 1.5rem; /* Reduced from 1.6rem */
+        margin-bottom: 1.2rem; /* Reduced from 1.5rem */
+    }
+    
+    .letter-content {
+        font-size: 0.95rem; /* Reduced from 1rem */
+        line-height: 1.7; /* Tighter line height on mobile */
+    }
+    
+    .letter-content p {
+        margin-bottom: 0.8rem; /* Reduced from 1.2rem for tighter spacing */
+    }
+    
+    .letter-signature {
+        margin-top: 2rem; /* Reduced from 3rem */
+        font-size: 1rem;
+    }
+    
+    .signature-name {
+        font-size: 1.5rem; /* Reduced from 1.9rem */
+    }
 }
 
 /* ===== Extra small phones (< 375px) ===== */
@@ -2444,6 +2490,11 @@ button, .btn-primary, .btn-secondary {
    LOVE SCENE - CHAT TO LOVE LETTER
    ======================================== */
 
+/* Love Scene Page - No Scroll */
+#page-love-scene {
+    overflow: hidden !important; /* Prevent scrolling */
+}
+
 /* Love Scene Container */
 .love-scene-content {
     position: relative;
@@ -2453,6 +2504,7 @@ button, .btn-primary, .btn-secondary {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Prevent internal scroll */
 }
 
 /* ===== START BUTTON ===== */
@@ -2558,30 +2610,27 @@ button, .btn-primary, .btn-secondary {
 
 /* ===== FIXED Issue C: A4 LOVE LETTER DESIGN ===== */
 
-/* Love Letter Container */
-.love-letter {
-    width: 100%;
-    max-width: 650px; /* A4-like proportion at comfortable reading size */
-    padding: 1.5rem;
-    perspective: 1200px;
-    opacity: 0;
-    animation: letterReveal 1s ease forwards;
-}
-
-@keyframes letterReveal {
-    to {opacity: 1;}
-}
-
-/* Letter Envelope (optional wrapper) */
-.letter-envelope {
-    width: 100%;
-}
-
-/* A4 Paper - Realistic Design */
+/* A4 Paper - Realistic Design - Now positioned directly, no wrappers */
 .letter-paper {
-    /* A4 aspect ratio: height ≈ width / 0.707  */
-    width: 100%;
-    min-height: 700px; /* Flexible height for content */
+    /* Positioning - fixed to center of viewport */
+    position: fixed !important;
+    top: 50% !important;
+    left: 46.25% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 1000 !important;
+    
+    /* Box model */
+    box-sizing: border-box !important; /* Include padding in width calculation */
+    
+    /* Fixed dimensions - centered with margins */
+    width: 93vw; /* Reduced from 90vw to ensure fit */
+    max-width: 480px; /* Reduced from 500px */
+    height: 90vh; /* Increased from 85vh to prevent text cutoff */
+    max-height: 850px; /* Increased from 800px */
+    
+    /* Display control */
+    opacity: 0;
+    pointer-events: auto;
     
     /* Paper color - ivory/cream for classic letter feel */
     background: linear-gradient(to bottom, 
@@ -2589,8 +2638,8 @@ button, .btn-primary, .btn-secondary {
         #f9f7f2 50%,
         #f7f5f0 100%);
     
-    /* A4-style margins (similar to 1 inch margins) */
-    padding: 50px 45px 60px 45px;
+    /* Reduced margins for more content space */
+    padding: 40px 35px 50px 35px;
     
     /* Realistic paper shadow - lifted from surface */
     box-shadow: 
@@ -2613,10 +2662,18 @@ button, .btn-primary, .btn-secondary {
     );
     
     position: relative;
-    overflow-y: auto;
+    overflow: hidden; /* No scroll - fixed paper size */
     
     /* Paper unfold animation */
     animation: paperUnfold 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.letter-paper.visible {
+    opacity: 1;
+}
+
+@keyframes letterReveal {
+    to {opacity: 1;}
 }
 
 @keyframes paperUnfold {
@@ -2633,49 +2690,30 @@ button, .btn-primary, .btn-secondary {
 /* Letter Title */
 .letter-title {
     font-family: 'Dancing Script', cursive;
-    font-size: 2.3rem;
+    font-size: 2rem; /* Reduced from 2.3rem */
     font-weight: 700;
     color: #654321; /* Dark brown - ink color */
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem; /* Reduced from 2rem */
     text-shadow: 1px 1px 3px rgba(101, 67, 33, 0.08);
-    line-height: 1.4;
+    line-height: 1;
     position: relative;
 }
 
 /* Letter Content */
 .letter-content {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.3rem;
-    line-height: 2.2; /* Align with lined paper background */
+    font-size: 1.2rem; /* Reduced from 1.3rem */
+    line-height: 1; /* Reduced from 2 for tighter spacing */
     color: #4a3830; /* Dark gray-brown for readability */
-    text-align: left;
-    margin-bottom: 2.5rem;
+    text-align: justify;
+    margin-bottom: 1.5rem; /* Reduced from 2rem */
 }
 
 .letter-content p {
-    margin-bottom: 1.8rem; /* Space between paragraphs */
-    opacity: 0;
-    animation: letterLineReveal 0.7s ease forwards;
+    margin-bottom: 1rem; /* Reduced from 1.5rem for tighter paragraph spacing */
+    opacity: 0; /* Start hidden, typewriter will make visible */
 }
-
-@keyframes letterLineReveal {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Staggered animation for multiple paragraphs */
-.letter-content p:nth-child(1) {animation-delay: 0.2s;}
-.letter-content p:nth-child(2) {animation-delay: 0.4s;}
-.letter-content p:nth-child(3) {animation-delay: 0.6s;}
-.letter-content p:nth-child(4) {animation-delay: 0.8s;}
-.letter-content p:nth-child(5) {animation-delay: 1s;}
 
 /* Letter Signature */
 .letter-signature {

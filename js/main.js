@@ -322,7 +322,17 @@ function triggerPageAnimations(pageIndex) {
 }
 
 // ===== BUTTON HANDLERS =====
+let buttonsInitialized = false; // Flag to prevent duplicate initialization
+
 function initButtons() {
+    // Prevent duplicate initialization
+    if (buttonsInitialized) {
+        console.log('⚠️ Buttons already initialized, skipping...');
+        return;
+    }
+    
+    console.log('✓ Initializing buttons...');
+    
     // Start button
     if (elements.btnStart) {
         elements.btnStart.addEventListener('click', () => {
@@ -351,7 +361,7 @@ function initButtons() {
     if (elements.btnToConfession) {
         elements.btnToConfession.addEventListener('click', () => {
             playSound('sound/tick.mp3');
-            navigateToPage(3);
+            navigateToPage(4);
         });
     }
     
@@ -364,6 +374,10 @@ function initButtons() {
     if (elements.btnNo) {
         initRunningButton();
     }
+    
+    // Mark as initialized
+    buttonsInitialized = true;
+    console.log('✓ Buttons initialized successfully');
 }
 
 function handleYesClick() {
@@ -1219,7 +1233,7 @@ function initLoveSceneDOMReferences() {
     loveSceneElements.startBtn = document.getElementById('love-scene-start');
     loveSceneElements.chatPanel = document.getElementById('chat-panel');
     loveSceneElements.chatMessages = document.getElementById('chat-messages');
-    loveSceneElements.loveLetter = document.getElementById('love-letter');
+    loveSceneElements.loveLetter = document.getElementById('love-letter'); // Now points to letter-paper
     loveSceneElements.letterContent = document.getElementById('letter-content');
 }
 
@@ -1253,16 +1267,9 @@ function startLoveScene() {
     loveSceneElements.startBtn.classList.add('hidden');
     loveSceneElements.startBtn.style.display = 'none';
     
-    // Show chat panel after button fades
+    // Show love letter directly with typewriter effect (skip chat)
     setTimeout(() => {
-        // Explicitly show chat panel
-        loveSceneElements.chatPanel.style.display = 'flex';
-        loveSceneElements.chatPanel.classList.add('active');
-        
-        // Start showing messages after panel animates in
-        setTimeout(() => {
-            showNextMessage();
-        }, 600);
+        showLoveLetterDirect();
     }, 500);
 }
 
@@ -1375,6 +1382,66 @@ function scrollChatToBottom() {
     if (loveSceneElements.chatMessages) {
         loveSceneElements.chatMessages.scrollTop = loveSceneElements.chatMessages.scrollHeight;
     }
+}
+
+/**
+ * Show love letter directly with typewriter effect (skip chat)
+ */
+function showLoveLetterDirect() {
+    // Get letter content from config or defaults
+    const letterLines = (typeof CONFIG !== 'undefined' && CONFIG.loveScene?.loveLetter)
+        ? CONFIG.loveScene.loveLetter
+        : defaultLoveLetter;
+    
+    // Clear letter content
+    loveSceneElements.letterContent.innerHTML = '';
+    
+    // Show love letter container
+    loveSceneElements.loveLetter.style.display = 'block';
+    loveSceneElements.loveLetter.classList.add('visible');
+    
+    // Add each line as a paragraph and apply typewriter effect
+    let cumulativeDelay = 300; // Start delay
+    
+    letterLines.forEach((line, index) => {
+        const p = document.createElement('p');
+        p.style.opacity = '0';
+        p.textContent = ''; // Start empty for typewriter
+        loveSceneElements.letterContent.appendChild(p);
+        
+        // Apply typewriter effect with cumulative delay
+        setTimeout(() => {
+            typewriterEffect(p, line, 30); // 30ms per character
+        }, cumulativeDelay);
+        
+        // Calculate next delay: current line length * speed + pause between lines
+        const lineDelay = line.length > 0 ? (line.length * 30) + 400 : 200;
+        cumulativeDelay += lineDelay;
+    });
+    
+    // Heart burst effect after some content appears
+    setTimeout(createHeartBurst, 1500);
+}
+
+/**
+ * Typewriter effect for individual element
+ * @param {HTMLElement} element - Element to apply effect to
+ * @param {string} text - Text to type out
+ * @param {number} speed - Speed in ms per character
+ */
+function typewriterEffect(element, text, speed = 50) {
+    let index = 0;
+    element.style.opacity = '1';
+    
+    function type() {
+        if (index < text.length) {
+            element.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, speed);
+        }
+    }
+    
+    type();
 }
 
 /**
