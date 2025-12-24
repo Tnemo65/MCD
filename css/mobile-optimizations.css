@@ -1,0 +1,335 @@
+/* ========================================
+   COMPREHENSIVE MOBILE OPTIMIZATION
+   iPhone 11 Pro Max / iPhone XS Max (414x896)
+   ======================================== */
+
+@media (max-width: 428px) {
+    /* ===== Global Mobile Fixes ===== */
+    :root {
+        --space-xs: 0.375rem;
+        --space-sm: 0.625rem;
+        --space-md: 1rem;
+        --space-lg: 1.75rem;
+        --space-xl: 2.25rem;
+        --space-xxl: 3rem;
+    }
+    
+    body {
+        font-size: 15px;
+    }
+    
+    /* ===== Page 1: Intro ===== */
+    .intro-title {
+        font-size: clamp(2.25rem, 10vw, 3.5rem);
+        padding: 0 1rem;
+    }
+    
+    .intro-text {
+        font-size: clamp(0.95rem, 3.5vw, 1.2rem);
+        padding: var(--space-md);
+        max-width: 90%;
+    }
+    
+    .btn-primary {
+        padding: var(--space-md) var(--space-lg);
+        font-size: 1rem;
+        min-width: auto;
+    }
+    
+    /* ===== Page 2: Timeline ===== */
+    #page-story {
+        padding-top: var(--space-lg);
+    }
+    
+    .section-title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        margin-bottom: var(--space-lg);
+    }
+    
+    .timeline {
+        padding-left: 35px;
+        max-width: 100%;
+    }
+    
+    .timeline-icon {
+        width: 36px;
+        height: 36px;
+        left: -35px;
+        font-size: 16px;
+    }
+    
+    .timeline-content {
+        padding: var(--space-md);
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-text,
+    .timeline-item:nth-child(even) .timeline-text {
+        order: 1;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-image,
+    .timeline-item:nth-child(even) .timeline-image {
+        order: 2;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.25rem;
+    }
+    
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+    
+    .btn-secondary {
+        padding: var(--space-md) var(--space-lg);
+        font-size: 1rem;
+    }
+    
+    /* ===== Page 3: Gallery/Carousel ===== */
+    /* Already optimized in previous section */
+    
+    /* ===== Page 5: Confession ===== */
+    .confession-box {
+        padding: var(--space-xl) var(--space-lg);
+        max-width: 90%;
+    }
+    
+    .heart-large {
+        font-size: 3.5rem;
+        margin-bottom: var(--space-md);
+    }
+    
+    .confession-title {
+        font-size: clamp(1.75rem, 6vw, 2.25rem);
+        margin-bottom: var(--space-md);
+    }
+    
+    .confession-text {
+        font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+        line-height: 1.8;
+    }
+    
+    .confession-buttons {
+        flex-direction: column;
+        gap: var(--space-md);
+        margin-top: var(--space-lg);
+    }
+    
+    .btn-yes, .btn-no {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1.05rem;
+        min-width: auto;
+        min-height: 50px;
+    }
+    
+    /* ===== Page 6: Love Scene ===== */
+    .love-scene-content {
+        padding: var(--space-lg) var(--space-md);
+    }
+    
+    .love-scene-start-btn {
+        padding: var(--space-lg) var(--space-xl);
+        font-size: 1.1rem;
+    }
+    
+    .chat-panel {
+        max-width: 100%;
+        max-height: 70vh;
+        margin: 0 var(--space-md);
+    }
+    
+    .chat-header {
+        padding: var(--space-md);
+    }
+    
+    .chat-messages {
+        padding: var(--space-md);
+        max-height: 50vh;
+    }
+    
+    .chat-message {
+        max-width: 85%;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .letter-paper {
+        padding: 2rem 1.5rem;
+        min-height: auto;
+        margin: 1rem;
+    }
+    
+    .letter-paper::before {
+        left: 1.5rem;
+    }
+    
+    .letter-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .letter-content {
+        font-size: 1rem;
+        line-height: 1.9;
+    }
+    
+    .letter-signature {
+        margin-top: 2rem;
+        font-size: 1.05rem;
+    }
+    
+    /* ===== Page 7: Final ===== */
+    .final-content {
+        padding: var(--space-lg);
+        max-width: 90%;
+    }
+    
+    .celebration-emoji {
+        font-size: 3.5rem;
+        margin-bottom: var(--space-lg);
+    }
+    
+    .final-title {
+        font-size: clamp(2rem, 7vw, 2.75rem);
+        margin-bottom: var(--space-md);
+    }
+    
+    .final-text {
+        font-size: clamp(1rem, 3.5vw, 1.25rem);
+        line-height: 1.8;
+    }
+    
+    .final-message {
+        margin-top: var(--space-lg);
+        padding: var(--space-md);
+    }
+    
+    .btn-messenger {
+        margin-top: var(--space-lg);
+        padding: var(--space-md) var(--space-xl);
+        font-size: 1.05rem;
+    }
+    
+    /* ===== Menu & Navigation ===== */
+    .menu-toggle {
+        padding: 0.625rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .nav-menu {
+        width: 75vw;
+        max-width: 300px;
+    }
+    
+    .nav-menu-header h3 {
+        font-size: 1.25rem;
+    }
+    
+    .nav-menu-item {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    /* ===== Audio Button ===== */
+    .audio-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+    }
+    
+    /* ===== Floating Hearts (reduce on mobile) ===== */
+    .floating-heart {
+        font-size: clamp(14px, 4vw, 20px) !important;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+    .intro-title {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+    
+    .timeline {
+        padding-left: 30px;
+    }
+    
+    .timeline-icon {
+        width: 32px;
+        height: 32px;
+        left: -30px;
+        font-size: 14px;
+    }
+    
+    .confession-box {
+        padding: var(--space-lg) var(--space-md);
+    }
+    
+    .btn-yes, .btn-no {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .letter-paper {
+        padding: 1.5rem 1rem;
+    }
+    
+    .letter-title {
+        font-size: 1.5rem;
+    }
+    
+    .letter-content {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+}
+
+/* Landscape mode fixes for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .page-content {
+        padding: var(--space-md);
+    }
+    
+    .intro-title {
+        font-size: 2rem;
+    }
+    
+    .intro-text {
+        padding: var(--space-sm);
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-md);
+    }
+    
+    .timeline {
+        padding-left: 25px;
+    }
+    
+    .timeline-icon {
+        width: 28px;
+        height: 28px;
+        left: -25px;
+    }
+    
+    .confession-box {
+        padding: var(--space-md);
+    }
+    
+    .heart-large {
+        font-size: 2.5rem;
+    }
+    
+    .btn-yes, .btn-no {
+        padding: 0.75rem 1.5rem;
+        min-height: 44px;
+    }
+}
