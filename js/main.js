@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initButtons();
     initAudio();
+    initLoveScene(); // Initialize Love Scene here instead of separate listener
     startFloatingHearts();
     initScrollAnimations();
     initSparkles();
@@ -80,6 +81,15 @@ function initConfig() {
         if (CONFIG.introDesc && elements.introText) {
             elements.introText.innerHTML = CONFIG.introDesc.replace(/\n/g, '<br>');
         }
+        
+        // Apply confession title and description
+        if (CONFIG.title && elements.confessionTitle) {
+            elements.confessionTitle.textContent = CONFIG.title;
+        }
+        if (CONFIG.desc && elements.confessionText) {
+            elements.confessionText.innerHTML = CONFIG.desc.replace(/\n/g, '<br>');
+        }
+        
         if (CONFIG.question && elements.confessionText) {
             const strongText = elements.confessionText.querySelector('strong');
             if (strongText) strongText.textContent = CONFIG.question;
@@ -1461,7 +1471,7 @@ function transformToLoveLetter() {
     letterLines.forEach((line, index) => {
         const p = document.createElement('p');
         p.textContent = line;
-        p.style.animationDelay = `${index * 0.1}s`;
+        p.style.animationDelay = `${index * 2}s`; // Increased to 2s per paragraph
         loveSceneElements.letterContent.appendChild(p);
     });
     
@@ -1501,9 +1511,3 @@ function resetLoveScene() {
         loveSceneElements.loveLetter.classList.remove('visible');
     }
 }
-
-// Initialize Love Scene on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-    // Delay initialization to ensure all elements are loaded
-    setTimeout(initLoveScene, 100);
-});

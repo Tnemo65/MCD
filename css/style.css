@@ -185,11 +185,23 @@ p, .body-text {
 /* Improved text readability */
 .intro-text, .confession-text, .final-text {
     line-height: var(--line-height-loose);
-    text-align: center;
+    text-align: justify; /* Justify all long paragraphs */
+}
+
+/* Better background for confession and final text */
+.confession-text, .final-text {
+    background: rgba(255, 255, 255, 0.8); /* Reduced to 80% opacity */
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: #2a1a27;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .timeline-content p, .letter-content {
     line-height: var(--line-height-relaxed);
+    text-align: justify; /* Justify timeline and letter content */
 }
 
 /* ===== SPARKLE PARTICLES ===== */
@@ -1011,21 +1023,23 @@ button, .btn-primary, .btn-secondary {
 
 .intro-title {
     font-family: var(--font-accent);
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(1.5rem, 5vw, 2rem); /* Reduced max size to fit on one line */
     color: var(--text-primary);
     text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.6);
 }
 
 .intro-text {
     font-size: clamp(1rem, 3vw, 1.4rem);
-    color: var(--text-secondary);
+    color: #2a1a27; /* Darker text for better contrast */
     max-width: 500px;
     line-height: 2;
-    background: var(--gradient-glass);
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.5); /* Reduced to 80% opacity */
+    backdrop-filter: blur(10px);
     padding: var(--space-lg);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
+    text-align: justify; /* Justify long paragraphs */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* White border for more definition */
 }
 
 /* ===== PAGE 2: TIMELINE ===== */
@@ -1089,7 +1103,7 @@ button, .btn-primary, .btn-secondary {
     backdrop-filter: blur(10px);
     padding: var(--space-lg);
     border-radius: var(--radius-md);
-    text-align: left;
+    text-align: justify; /* Fixed from 'just' */
     box-shadow: var(--shadow-soft);
     border: 1px solid rgba(255, 255, 255, 0.3);
     
@@ -3028,7 +3042,9 @@ button, .btn-primary, .btn-secondary {
         0 20px 40px rgba(0, 0, 0, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.9);
     position: relative;
-    min-height: 600px;
+    min-height: 300px; /* Increased from 600px to fit more content */
+    max-height: 100vh; /* Limit height to viewport */
+    overflow-y: auto; /* Allow scrolling if content exceeds */
     max-width: 800px;
     margin: 2rem auto;
     border: 1px solid rgba(230, 220, 200, 0.5);
@@ -3049,6 +3065,7 @@ button, .btn-primary, .btn-secondary {
     );
 }
 
+/* Removed horizontal lines - no longer needed
 .letter-paper::after {
     content: '';
     position: absolute;
@@ -3065,13 +3082,15 @@ button, .btn-primary, .btn-secondary {
     pointer-events: none;
     border-radius: 2px;
 }
+*/
 
 .letter-title {
     font-family: 'Dancing Script', cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #ff6b9d;
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-top: -1rem; /* Move title up */
+    margin-bottom: 0.5rem; /* Reduce gap to content */
     position: relative;
     z-index: 1;
     text-shadow: 0 2px 4px rgba(255, 107, 157, 0.1);
@@ -3079,16 +3098,17 @@ button, .btn-primary, .btn-secondary {
 
 .letter-content {
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.2rem;
-    line-height: 2.2;
+    font-size: 0.5rem; /* Fixed syntax - removed space */
+    line-height: 1.5;
     color: #4a3347;
+    margin-top: -1rem; /* Move content up closer to title - fixed syntax */
     position: relative;
     z-index: 1;
     text-align: justify;
 }
 
 .letter-content p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.1rem; /* Reduced for tighter paragraph spacing */
     opacity: 0;
     animation: letterLineReveal 0.5s ease forwards;
 }
@@ -3101,6 +3121,31 @@ button, .btn-primary, .btn-secondary {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* Letter Signature - Style the last paragraph as signature */
+.letter-content p:last-child {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    color: #4a3347;
+    text-align: right;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-style: italic;
+    opacity: 0;
+    animation: signatureAppear 1s ease forwards 0.5s;
+}
+
+@keyframes signatureAppear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -3149,4 +3194,4 @@ button, .btn-primary, .btn-secondary {
     .letter-content {
         font-size: 1.05rem;
     }
-}
+}}

@@ -6,11 +6,8 @@
 
 const CONFIG = {
     // ===== TRANG 1: INTRO =====
-    introTitle: 'Xin chào em...',
-    introDesc: `Trái đất vốn lạ thường
-Mà sao em cứ đi nhầm đường
-Lạc vào tim anh lẻ loi
-Đằng sau chữ yêu đây là thương`,
+    introTitle: 'Chào tình yêu của anh',
+    introDesc: `Chào em, xin tự giới thiệu, anh là Thịnh, chiếc web này được sinh ra với mục đích giúp anh gửi gắm đôi điều tới em cũng như ta cùng nhau nhìn lại quãng thời gian không ngắn - cũng chẳng dài vừa qua. Anh xin khai sự thật: Với mục đích mang tới cho em 1 trải nghiệm được cá nhân hóa ~ dành riêng cho em không hề giống 1 ai, anh đã vừa làm vừa tìm hiểu. Làm web không phải chuyên môn của anh và thẩm mỹ của anh cũng đã được em kiểm chứng thì anh mong rằng những gì anh mang tới phần nào khiến em vui và trân trọng khoảng thời gian vừa qua.`,
     btnIntro: 'Tiếp tục',
 
     // ===== TRANG 2: TIMELINE =====
@@ -18,60 +15,52 @@ Lạc vào tim anh lẻ loi
     // Đặt ảnh vào thư mục img/ và thay đổi đường dẫn image
     timeline: [
         {
-            icon: '💫',
             date: 'Ngày đầu tiên',
-            title: 'Lần đầu gặp nhau',
+            title: 'Ngày đầu tiên gặp nhau',
             image: 'img/z7358483231625_5a673dfbef2c2a02f3b37307052692c2.jpg',
-            description: 'Khoảnh khắc mà trái tim anh bắt đầu rung động...'
+            description: 'Em là người mà ngay từ khi gặp lần đầu cho anh cảm giác gần gũi đến lạ, mặc dù hôm đó hơi run nhưng em đã kéo được anh vào những câu chuyện'
         },
         {
-            icon: '💬',
-            date: 'Những ngày sau đó',
-            title: 'Những cuộc trò chuyện',
+            date: '1 ngày đi chơi như bao ngày',
+            title: 'Đi tô tượng',
             image: 'img/z7358486977728_576d85cc9456463ad660f754267f5cdb.jpg',
-            description: 'Mỗi tin nhắn, mỗi cuộc gọi đều làm anh thêm nhớ em...'
+            description: 'Là 1 ngày bình thường đi tô tượng nhưng ở cạnh người đặc biệt, lúc này là dần dần quen quen với sự hiện diện của em. Và sản phẩm thì đang được anh đặt ở công ty, ngắm hàng ngày'
         },
         {
-            icon: '☕',
-            date: 'Kỷ niệm đẹp',
-            title: 'Những lần hẹn hò',
+            date: 'Ngon ngon ngon',
+            title: 'Ai là vua đầu bếp',
             image: 'img/z7358486973044_95059a4f53e73deddafa9174075c35b2.jpg',
-            description: 'Bên em, thời gian như ngừng trôi...'
+            description: 'Cũng không ngờ tới việc 1 ngày anh được em nấu cơm cho ăn, đã thế còn nấu ngon nữa ~.~ Nó thích gì đâu á'
         },
         {
-            icon: '☕',
-            date: 'Kỷ niệm đẹp',
-            title: 'Những lần hẹn hò',
-            image: 'img/z7358483228862_625e3f3a461cf448bdf5ef5c7936d399.jpg',
-            description: 'Bên em, thời gian như ngừng trôi...'
+            date: 'Khoảnh khắc',
+            title: 'Đua xe ngày đầu gặp nhau',
+            image: 'img/z7358483228990_1df803015d80a1d452235be1e896048f.jpg',
+            description: 'Ai mà ngờ được đây sẽ là những hoạt động mà chúng mình đã làm vào lần đầu gặp mặt. Không phải là ăn tối, không phải ngồi cafe nói chuyện mà đó là 1 buổi dạo chơi ở Hồ Gươm, tô tượng và LẦN ĐẦU ĐI THỬ XE ĐIỆN CHUNG'
         },
         {
-            icon: '💕',
-            date: 'Hôm nay',
-            title: 'Khoảnh khắc này',
+            date: 'Hoa không ngẫu nhiên',
+            title: 'Hoa nè',
             image: 'img/z7362208920255_d65f98b073a94042a69380b8a17d077e.jpg',
-            description: 'Anh muốn nói với em điều quan trọng...'
+            description: 'Vô tình lướt Threads thấy hoa đẹp quá nên nhắn tin đặt mua tặng em liền'
         },
         {
-            icon: '💕',
-            date: 'Hôm nay',
-            title: 'Khoảnh khắc này',
+            date: 'Hoa ngẫu nhiên',
+            title: 'Lại hoa nữa',
             image: 'img/z7362208918537_4f75cfc21fee05e3d5edaf540af86700.jpg',
-            description: 'Anh muốn nói với em điều quan trọng...'
+            description: 'Bó hoa này là tình cờ 1 ngày đi làm về thấy hoa đẹp quá mua tặng em luôn, cũng không có động lực hay lý do gì, chỉ đơn giản là hoa đẹp + yêu em'
         },
         {
-            icon: '💕',
-            date: 'Hôm nay',
-            title: 'Khoảnh khắc này',
+            date: 'Ngon ngon ngonnnn',
+            title: 'Quái vật ăn thịt người đẹp',
             image: 'img/z7358486974154_599a02f7be63a75c6fc9255544e8a829.jpg',
-            description: 'Anh muốn nói với em điều quan trọng...'
+            description: '"Anh ơi em béo quá" - "Anh dẫn em đi ăn Dooki nhé"'
         },
         {
-            icon: '💕',
-            date: 'Hôm nay',
-            title: 'Khoảnh khắc này',
+            date: 'Ưng',
+            title: 'Bức ảnh ưng tuyệt đối',
             image: 'img/z7358483225205_f5087cd7371c5d69d2b23cfe31c53808.jpg',
-            description: 'Anh muốn nói với em điều quan trọng...'
+            description: 'Có thể là bức ảnh ưng nhất luôn'
         }
     ],
 
@@ -79,61 +68,49 @@ Lạc vào tim anh lẻ loi
     // 12 ảnh từ thư mục img/
     gallery: [
         {
-            src: 'img/z7358483214722_f55bfea9177477d54e92372273b24a1e.jpg',
-            caption: 'Kỷ niệm đầu tiên 💕'
+            src: 'img/z7358483214722_f55bfea9177477d54e92372273b24a1e.jpg'
         },
         {
-            src: 'img/z7358483219029_6179d585d4d50df1a84c4505aae5a36c.jpg',
-            caption: 'Bên nhau mãi mãi 💗'
+            src: 'img/z7358483219029_6179d585d4d50df1a84c4505aae5a36c.jpg'
         },
         {
-            src: 'img/z7358483223541_9207ef3cefcbd0dbe919f0cac437c51e.jpg',
-            caption: 'Những nụ cười 😊'
+            src: 'img/z7358483223541_9207ef3cefcbd0dbe919f0cac437c51e.jpg'
         },
         {
-            src: 'img/z7358483225205_f5087cd7371c5d69d2b23cfe31c53808.jpg',
-            caption: 'Hạnh phúc bên em 🥰'
+            src: 'img/z7358483225205_f5087cd7371c5d69d2b23cfe31c53808.jpg'
         },
         {
-            src: 'img/z7358483228862_625e3f3a461cf448bdf5ef5c7936d399.jpg',
-            caption: 'Khoảnh khắc ngọt ngào 💖'
+            src: 'img/z7358483228862_625e3f3a461cf448bdf5ef5c7936d399.jpg'
         },
         {
-            src: 'img/z7358483231625_5a673dfbef2c2a02f3b37307052692c2.jpg',
-            caption: 'Những phút giây bên em 💞'
+            src: 'img/z7358483231625_5a673dfbef2c2a02f3b37307052692c2.jpg'
         },
         {
-            src: 'img/z7358486973044_95059a4f53e73deddafa9174075c35b2.jpg',
-            caption: 'Nụ cười của em 😊'
+            src: 'img/z7358486973044_95059a4f53e73deddafa9174075c35b2.jpg'
         },
         {
-            src: 'img/z7358486974154_599a02f7be63a75c6fc9255544e8a829.jpg',
-            caption: 'Khoảnh khắc hạnh phúc 🌸'
+            src: 'img/z7358486974154_599a02f7be63a75c6fc9255544e8a829.jpg'
         },
         {
-            src: 'img/z7358486977164_450d19e40493331bba3b53128cd315a7.jpg',
-            caption: 'Yêu em từng ngày 💓'
+            src: 'img/z7358486977164_450d19e40493331bba3b53128cd315a7.jpg'
         },
         {
-            src: 'img/z7362207921045_07ac01e7791c2c40bc124665e5234b4c.jpg',
-            caption: 'Yêu em nhiều lắm 💝'
+            src: 'img/z7362207921045_07ac01e7791c2c40bc124665e5234b4c.jpg'
         },
         {
-            src: 'img/z7358486977728_576d85cc9456463ad660f754267f5cdb.jpg',
-            caption: 'Những giấc mơ chung 🌙'
+            src: 'img/z7358486977728_576d85cc9456463ad660f754267f5cdb.jpg'
         },
         {
-            src: 'img/z7358486981879_e800c9e489ddf22593c412a5aaf883ad.jpg',
-            caption: 'Mãi mãi bên em 💕'
+            src: 'img/z7358486981879_e800c9e489ddf22593c412a5aaf883ad.jpg'
         }
     ],
     
     // ===== TRANG 4: CONFESSION =====
-    title: 'Phải chăng em đã yêu ngay từ cái nhìn đầu tiên 😙',
-    desc: 'Phải chăng em đã say ngay từ lúc thấy nụ cười ấy',
-    question: 'Em có muốn làm người yêu của anh không? 💕',
-    btnYes: 'Có! Em đồng ý 💕',
-    btnNo: 'Để em suy nghĩ... 🤔',
+    title: 'Cảnh báo chuyển cảnh',
+    desc: 'Vậy là ta đã cùng nhau nhìn lại những hình ảnh kỷ niệm của những ngày tháng vừa qua, giờ thì trải lòng 1 chút ha',
+    question: '',
+    btnYes: 'Ok anh tiếp tục thôi',
+    btnNo: 'Không???',
     btnReply: 'Gửi cho anh <3',
     reply: 'Yêu thì yêu mà không yêu thì yêu <33333333',
 
@@ -151,60 +128,30 @@ Lạc vào tim anh lẻ loi
     coupleGallery: [
         {
             left: 'img/couple/a.2.jpg',
-            right: 'img/couple/a.1.jpg',
-            caption: 'Khoảnh khắc bên nhau 💕'
+            right: 'img/couple/a.1.jpg'
         },
         {
             left: 'img/couple/b.1.jpg',
-            right: 'img/couple/b.2.jpg',
-            caption: 'Cùng nhau mỗi ngày 💗'
+            right: 'img/couple/b.2.jpg'
         },
         {
             left: 'img/couple/c.2.jpg',
-            right: 'img/couple/c.1.jpg',
-            caption: 'Hạnh phúc song hành 💞'
+            right: 'img/couple/c.1.jpg'
         }
     ],
 
     // ===== TRANG 6: LOVE SCENE (Chat → Love Letter) =====
     // Có thể tùy chỉnh tin nhắn và nội dung thư tình
     loveScene: {
-        // Tin nhắn trong chat panel
-        // type: 'sent' = anh gửi (bên phải), 'received' = em (bên trái)
-        messages: [
-            { type: 'sent', text: 'Em ơi...' },
-            { type: 'received', text: 'Gì vậy anh?' },
-            { type: 'sent', text: 'Anh có điều muốn nói với em...' },
-            { type: 'received', text: 'Nói đi anh 😊' },
-            { type: 'sent', text: 'Từ lần đầu gặp em, anh đã biết em là người đặc biệt' },
-            { type: 'sent', text: 'Mỗi ngày trôi qua, cảm xúc ấy càng lớn hơn...' },
-            { type: 'received', text: '...' },
-            { type: 'sent', text: 'Em khiến anh muốn trở thành người tốt hơn 💕' },
-            { type: 'sent', text: 'Anh không giỏi nói lời hoa mỹ...' },
-            { type: 'sent', text: 'Nhưng anh muốn em biết rằng...' },
-            { type: 'sent', text: 'Trái tim anh, từ lâu đã thuộc về em rồi 💝' },
-            { type: 'received', text: 'Anh... 🥺💕' }
-        ],
+
         
         // Nội dung thư tình (hiện sau khi chat xong)
         loveLetter: [
-            'Em yêu của anh, Có những điều anh muốn nói, nhưng lời nói thật khó diễn tả được hết tâm tư này...',
-            'Từ lần đầu gặp em, ánh mắt của em đã làm anh nhận ra rằng,',
-            'Có một người đã khiến trái tim anh rung động theo một cách mà anh chưa từng biết.',
-            'Mỗi ngày trôi qua bên em, anh thấy mình may mắn biết bao.',
-            'Em là ánh sáng trong những ngày tối, là niềm vui trong những khoảnh khắc buồn.',
-            'Em là lý do khiến anh muốn trở thành phiên bản tốt hơn của chính mình.',
-            'Anh không giỏi lời văn hoa mỹ như những bài thơ,',
-            'Nhưng anh muốn em biết rằng...',
-            'Trong trái tim anh, em là duy nhất.',
-            'Em là người anh muốn chia sẻ mọi khoảnh khắc,',
-            'Từ những điều nhỏ nhặt nhất đến những giấc mơ lớn lao nhất.',
-            'Anh hứa sẽ luôn ở bên em, yêu thương em, trân trọng em,',
-            'Và mỗi ngày, anh sẽ cố gắng để em luôn cảm thấy hạnh phúc.',
-            'Em chính là câu trả lời mà anh đã tìm kiếm suốt bấy lâu nay.',
-            '',
-            'Mãi bên em,',
-            'Người yêu em nhất trên đời 💕'
+            'Chào em, anh là Thịnh, là người yêu em. Ngày này ba tháng trước cũng là ngày mình lần đầu nhắn tin với nhau qua Facebook, kể ra cũng nhanh phết ha. Từ hai người xa lạ không biết gì về nhau, hơn nữa bản thân anh là người rất ngại chia sẻ, luôn trong trạng thái không dám bộc lộ những thứ ẩn giấu bên trong, nhưng mọi thứ đến một cách tự nhiên, anh thậm chí không biết em đã chiếm được lòng tin của anh từ bao giờ và thoáng một cái mình đã trở thành một phần trong cuộc đời của nhau rồi. Những ngày đầu nói chuyện, những cuộc trò chuyện tưởng như rất bình thường lại khiến anh mong chờ mỗi ngày.',
+            'Quãng thời gian vừa rồi, anh luôn cảm thấy mình thật may mắn khi có người đồng hành - vừa là áp lực, nhưng cũng là động lực rất lớn để anh cố gắng và phát triển hơn, và động lực ấy chính là em. Trong mối quan hệ của mình, anh biết anh không hoàn hảo, nhiều lúc vẫn hành động chưa thực sự đúng, nhưng anh mong em hiểu rằng anh luôn cố gắng bằng tất cả những gì bản thân có để mang đến cho em những điều tốt đẹp. Những ngày qua, em mang đến cho anh một cảm giác hoàn toàn khác; lần đầu anh cảm nhận được tình yêu nhiều đến vậy (chưa đến mức cấn đâu, yên tâm ^^). Sự đồng hành, sự tôn trọng và cách em đáp lại tình cảm là những điều khiến anh vừa “bất ngờ”, vừa thật sự trân trọng khi có được từ một người.',
+            'Những lời nhắn này đáng ra nên được gửi tới em sớm hơn, nhưng chắc em hiểu anh đang chờ mọi chuyện xung quanh diễn ra suôn sẻ. Trước đó, anh từng tỏ tình em trực tiếp mà không có nhiều sự chuẩn bị, và bây giờ… chắc chắn không phải là một lời tỏ tình lại. Anh chỉ muốn khẳng định rằng anh thật sự nghiêm túc với em và mong mối quan hệ này đến từ cả hai phía. Anh mong chúng mình sẽ luôn chọn ở lại bên nhau, cùng lắng nghe, cùng thấu hiểu và cùng trưởng thành theo cách tự nhiên nhất. Anh yêu em.',
+            'Anh yêu em. 💕',
+            'Lê Đắc Thịnh'
         ]
     }
 };
